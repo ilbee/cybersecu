@@ -114,6 +114,15 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/api-platform/core" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/nelmio/cors-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/willdurand/negotiation" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/fakerphp/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/data-fixtures" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nelmio/alice" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/exporter" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/recursion-context" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/comparator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/diff" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/myclabs/deep-copy" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
