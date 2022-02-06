@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    Salut {{ app.user.firstName }} !
+    <nav>
+        <ul>
+            <li><a href="{{ path('profile') }}">Mon profil</a></li>
+        </ul>
+    </nav>
+{% endblock %}
