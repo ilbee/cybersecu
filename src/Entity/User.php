@@ -12,7 +12,13 @@ use Symfony\Component\Security\Core\User\UserInterface;
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
  * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
- * @ApiResource()
+ * @ApiResource(
+ *     collectionOperations={"GET"},
+ *     itemOperations={
+ *      "GET",
+ *      "PUT"={"security"="is_granted('ROLE_ADMIN') or object == user"}
+ *     }
+ * )
  */
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
@@ -48,6 +54,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @ORM\Column(type="string", length=255)
      */
     private $lastName;
+
+    /**
+     * @ORM\Column(type="date_immutable", nullable=true)
+     */
+    private $birthDate;
 
     public function getId(): ?int
     {
@@ -158,6 +169,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setLastName(string $lastName): self
     {
         $this->lastName = $lastName;
+
+        return $this;
+    }
+
+    public function getBirthDate(): ?\DateTimeImmutable
+    {
+        return $this->birthDate;
+    }
+
+    public function setBirthDate(?\DateTimeImmutable $birthDate): self
+    {
+        $this->birthDate = $birthDate;
 
         return $this;
     }
