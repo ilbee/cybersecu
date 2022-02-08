@@ -3,12 +3,13 @@
 {% block title %}Profil{% endblock %}
 
 {% block body %}
-    <h1>Mon profil</h1>
+    <h1>Profil de user {{ user.firstName }}</h1>
 
     {{ form_start(form) }}
         {{ form_row(form.email) }}
         {{ form_row(form.firstName) }}
         {{ form_row(form.lastName) }}
+        {{ form_row(form.roles) }}
     <button type="submit" class="btn btn-primary">Save</button>
     <a href="{{ path('home') }}" class="btn btn-secondary">Cancel</a>
     {{ form_end(form) }}
